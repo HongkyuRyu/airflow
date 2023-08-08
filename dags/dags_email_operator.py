@@ -13,5 +13,5 @@ with DAG(
         task_id = "send_email_task",
         to="hongkyu08@gmail.com",
         subject="Airflow 성공 메일",
-        html_content="Airflow 작업이 완료되었습니다."
+        html_content="Airflow 작업이 완료되었습니다!."
     )
