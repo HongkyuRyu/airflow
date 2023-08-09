@@ -1,4 +1,4 @@
-# 일반 파라미터 + args
+# 함수에 일반 변수 + *args도 있을 경우
 
 from airflow import DAG
 import pendulum
