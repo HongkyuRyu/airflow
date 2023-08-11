@@ -6,7 +6,7 @@ from airflow.decorators import task
 with DAG(
     dag_id="dags_python_template",
     schedule="30 9 * * *",
-    start_date=pendulum.datetime(2023, 8, 1, tz="Asia/Seoul"),
+    start_date=pendulum.datetime(2023, 3, 1, tz="Asia/Seoul"),
     catchup=False
 ) as dag:
     
@@ -32,4 +32,4 @@ with DAG(
         print('task_instance: ', str(kwargs['ti'])) 
         
     
-    python_func1 >> python_func2()
+    python_t1 >> python_func2()
