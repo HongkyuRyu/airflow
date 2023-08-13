@@ -10,7 +10,7 @@ with DAG(
     catchup=False
 ) as dag:
     
-    @task(task_id='something task')
+    @task(task_id='something_task')
     def some_logic(**kwargs):
         from random import choice
         return choice(['Success', 'Fail'])
