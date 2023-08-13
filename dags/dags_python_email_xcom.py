@@ -6,7 +6,7 @@ from airflow.operators.email import EmailOperator
 with DAG(
     dag_id='dags_python_email_xcom',
     schedule="0 8 1 * *",
-    start_date=pendulum.datetime("2023, 3, 1", "Asia/Seoul"),
+    start_date=pendulum.datetime(2023, 3, 1, "Asia/Seoul"),
     catchup=False
 ) as dag:
     
