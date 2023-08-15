@@ -4,7 +4,7 @@ from airflow.decorators import task
 from airflow.providers.http.operators.http import SimpleHttpOperator
 # import common.poi_func as poi_array# poi nums
 import pendulum
-
+import xmltodict
 
 with DAG(
     dag_id="dags_simple_http_operators",
@@ -29,7 +29,6 @@ with DAG(
     def python_1(**kwargs):
         ti = kwargs['ti']
         rslt = ti.xcom_pull(task_ids='tb_electric_station_info')
-        import xmltodict
         from pprint import pprint
         response_dict = xmltodict.parse(rslt)
         pprint(response_dict)
