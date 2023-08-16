@@ -3,6 +3,7 @@ import pendulum
 from airflow.operators.python import PythonOperator
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 
+
 with DAG(
     dag_id="dags_python_with_postgres_hook_bulk_insert",
     start_date=pendulum.datetime(2023, 8, 1, tz="Asia/Seoul"),
