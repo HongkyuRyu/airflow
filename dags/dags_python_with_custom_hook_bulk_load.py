@@ -22,7 +22,7 @@ with DAG(
         task_id = "insert_postgres",
         python_callable=insert_postgres,
         op_kwargs={
-            'postgres_conn_id' : 'custom-db-postgres-custom',
+            'postgres_conn_id' : 'conn-db-postgres-custom',
             'tbl_nm': 'test02',
             'file_nm': '/opt/airflow/files/tbElectricCharging/{{data_interval_end.in_timezone("Asia/Seoul") | ds_nodash}}/tb_seoul_fast_charger_status.csv'
         }
