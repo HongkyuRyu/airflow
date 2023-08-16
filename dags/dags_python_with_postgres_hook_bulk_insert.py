@@ -19,7 +19,7 @@ with DAG(
         python_callable=insert_postgres,
         op_kwargs={
             'postgres_conn_id': 'conn-db-postgres-custom',
-            'tbl_nm': 'evChargingStation_bulk1',
-            'file_nm': '/opt/airflow/files/evChargingStation/{{data_interval_end.in_timezone("Asia/Seoul") | ds_nodash}}/tb_seoul_station_status.csv'
+            'tbl_nm': 'tbElectriCharging_bulk_1',
+            'file_nm': '/opt/airflow/files/tbElectricCharging/{{data_interval_end.in_timezone("Asia/Seoul") | ds_nodash}}/tb_seoul_fast_charger_status.csv'
         }
     )
