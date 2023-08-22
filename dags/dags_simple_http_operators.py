@@ -15,7 +15,8 @@ with DAG(
     """ 서울시 실시간 전기차 충전소/충전기 데이터 정보 """
     # http_conn_id = 'openapi.seoul.go.kr'
     
-    
+    #array = poi_array()
+    #for poi_number in array:
     tb_electric_station_info = SimpleHttpOperator(
         task_id="tb_electric_station_info",
         http_conn_id='openapi.seoul.go.kr',
